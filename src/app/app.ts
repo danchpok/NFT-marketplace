@@ -1,13 +1,9 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { Login } from './components/auth/login/login'; 
+import { Routes } from '@angular/router';
+import { Login } from './components/auth/login/login'; // Проверь свои пути к файлам
+import { Register } from './components/auth/register/register';
 
-@Component({
-  selector: 'app-root',
-  imports: [RouterOutlet, Login], // 2. Добавляем LoginComponent сюда через запятую
-  templateUrl: './app.html',
-  styleUrl: './app.css'
-})
-export class App {
-  protected readonly title = signal('nftmarket');
-}
+export const routes: Routes = [
+  { path: '', redirectTo: 'login', pathMatch: 'full' }, // Если открыли пустой сайт — кинет на логин
+  { path: 'login', component: Login },
+  { path: 'register', component: Register }
+];
