@@ -1,0 +1,40 @@
+<div class="profile-container">
+    <div class="profile-card">
+        <button class="close-btn">X</button>
+        <h1 class="profile-title">Create Profile</h1>
+
+        <div class="avatar-section">
+            <div class="avatar-circle">
+                <span class="avatar-icon">🖼</span>
+                <span class="avatar-text">Choose Image</span>
+            </div>
+            <p class="avatar-hint">
+                Рекомендуемый формат — PNG или JPG,
+                максимальный размер — 10 МБ.
+            </p>
+        </div>
+
+        <div class="field-group">
+            <label class="field-label">Username</label>
+            <input
+                type="text"
+                class="field-input"
+                [(ngModel)]="username"
+                placeholder="Введите имя"
+            >
+        </div>
+
+        <div class="field-group">
+            <label class="field-label">Bio</label>
+            <textarea
+                class="field-textarea"
+                [(ngModel)]="bio"
+                [maxlength]="maxBioLength"
+                placeholder="Раскажи о себе..."
+            ></textarea>
+            <span class="symbols-left">{{ symbolsLeft }}/{{ maxBioLength }} Symbols left</span>
+        </div>
+
+        <button type="button" class="create-btn"(click)="onCreate()">Create!</button>
+    </div>
+</div>

@@ -4,17 +4,18 @@
             <h2>Register</h2>
             <button class="close-btn">X</button>
         </div>
-        <form class="auth-form">
+        <form class="auth-form" (ngSubmit)="onRegister()">
             <div class="input-group">
-                <input type="text" id="login" placeholder="Введите ваше имя или никнейм">
+                <input type="text" [(ngModel)]="loginValue" name="login" placeholder="Введите ваше имя или никнейм">
             </div>
             <div class="input-group">
-                <input type="password" id="password" placeholder="придумайте пороль пороль">
+                <input type="password" [(ngModel)]="passwordValue" name="password" placeholder="придумайте пороль">
             </div>
             <div class="register-hint">
-                <a routerLink="/login" class="register-hint">Login</a>
+                <a routerLink="/login" class="switch-link">Login</a>
             </div>
             <button type="submit" class="submit-btn">Register</button>
+            <p *ngIf="errorMessage" style="color: #ff5555; font-size: 13px; margin-top: 10px;">{{ errorMessage }}</p>
         </form>
     </div>
 </div>
