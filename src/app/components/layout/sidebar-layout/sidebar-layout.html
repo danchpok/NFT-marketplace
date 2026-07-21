@@ -1,1 +1,15 @@
-<p>sidebar-layout works!</p>
+<div class="layout-container">
+  <aside class="sidebar">
+    <div class="sidebar-logo">MyNFT</div>
+    <ul class="sidebar-nav">
+      <li><a class="nav-item" routerLink="/nfts" routerLinkActive="active">NFT's</a></li>
+      <li><a class="nav-item" routerLink="/profile" routerLinkActive="active">Profile</a></li>
+      <li><a class="nav-item" routerLink="/my-nfts" routerLinkActive="active">My NFT's</a></li>
+      <li><a class="nav-item" routerLink="/create-nft" routerLinkActive="active">Create nft</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

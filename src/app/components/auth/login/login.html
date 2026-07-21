@@ -4,17 +4,18 @@
             <h2>Login</h2>
             <button class="close-btn">X</button>
         </div>
-        <form class="auth-form">
+        <form class="auth-form" (ngSubmit)="onLogin()">
             <div class="input-group">
-                <input type="text" id="login" placeholder="Введите ваш логин">
+                <input type="text" [(ngModel)]="loginValue" name="login" placeholder="Введите ваш логин">
             </div>
             <div class="input-group">
-                <input type="password" id="password" placeholder="Введите пороль">
+                <input type="password" [(ngModel)]="passwordValue" name="password" placeholder="Введите пороль">
             </div>
             <div class="register-hint">
                 <a routerLink="/register" class="register-link">Register</a>
             </div>
             <button type="submit" class="submit-btn">Login</button>
+            <p *ngIf="errorMessage" style="color: #ff5555; font-size: 13px; margin-top: 10px;">{{ errorMessage }}</p>
         </form>
     </div>
 </div>

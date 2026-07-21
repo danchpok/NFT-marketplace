@@ -1,6 +1,6 @@
 .auth-container {
     width: 100vw;
-    height: 100vh; /* Добавь это, чтобы растянуть на весь экран */
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
@@ -11,20 +11,16 @@
     justify-content: center;
     align-items: center;
 }
-
-/* Сама карточка — строго по размерам  */
 .auth-card {
   width: 406px;
   height: 302px;
-  background-color: #121520;  /* Цвет #121520 из Фигмы */
-  border-radius: 20px;        /* Скругление 20px */
-  backdrop-filter: blur(4px); /* Размытие 4 */
+  background-color: #121520;  
+  border-radius: 20px;        
+  backdrop-filter: blur(4px); 
   padding: 30px;
   box-sizing: border-box;
   position: relative;
 }
-
-/* Шапка */
 .auth-header {
   display: flex;
   justify-content: space-between;
@@ -39,8 +35,6 @@
   font-size: 30px;
   font-weight: 700;
 }
-
-/* Крестик закрытия */
 .close-btn {
   background: none;
   border: none;
@@ -48,8 +42,6 @@
   font-size: 20px;
   cursor: pointer;
 }
-
-/* Инпуты */
 .input-group {
   margin-bottom: 16px;
 }
@@ -74,8 +66,6 @@
   outline: none;
   border-color: #00e699;
 }
-
-/* Ссылка Register */
 .register-hint {
   text-align: right;
   margin-top: -10px;
@@ -88,12 +78,10 @@
   text-decoration: none;
   cursor: pointer;
 }
-
-/* Кнопка Login */
 .submit-btn {
   width: 100%;
   height: 44px;
-  background-color: #00e699; /* Фирменный зеленый */
+  background-color: #00e699; 
   border: none;
   border-radius: 12px;
   color: #ffffff;

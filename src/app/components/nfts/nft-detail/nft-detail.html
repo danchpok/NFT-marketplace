@@ -1,0 +1,17 @@
+<div class="nft-detail-page" *ngIf="nft; else notFound">
+  <a routerLink="/nfts" class="back-link">← Back to NFT's</a>
+  <div class="detail-grid">
+    <img class="detail-image" [src]="nft.image" [alt]="nft.title">
+    <div class="detail-info">
+      <span class="detail-category" [ngClass]="'category-' + nft.category.toLowerCase()">{{ nft.category }}</span>
+      <h1 class="detail-title">{{ nft.title }}</h1>
+      <div class="detail-price">$ {{ nft.price }}.00</div>
+      <button class="buy-btn-large">Buy now</button>
+    </div>
+  </div>
+</div>
+<ng-template #notFound>
+  <div class="nft-detail-page">
+    <p>NFT не найден.</p>
+  </div>
+</ng-template>

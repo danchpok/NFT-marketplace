@@ -1,1 +1,19 @@
-<p>nft-list works!</p>
+<div class="nft-page">
+    <h1 class="page-title">NFT's</h1>
+    <div class="search-bar">
+        <input type="text" placeholder="Search" class="search-input">
+    </div>
+    <div class="nft-grid">
+        <div class="nft-card" *ngFor="let nft of nfts">
+            <img [src]="nft.image" class="nft-image" alt="{{ nft.title }}">
+            <div class="nft-info">
+                <h3 class="nft-title">{{ nft.title }}</h3>
+                <span class="nft-category" [ngClass]="'category-' + nft.category.toLowerCase()">{{ nft.category }}</span>
+                <div class="nft-footer">
+                    <span class="nft-price">$ {{ nft.price }}.00</span>
+                    <button class="buy-btn">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
